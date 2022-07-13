@@ -1,5 +1,5 @@
 ## 仿Antd组件库
-eason-design 组件库是参考 antd 组件库设计， 算是笔者的一次组件库设计尝试。<br>
+eason-ui 组件库是参考 antd 组件库设计， 算是笔者的一次组件库设计尝试。<br>
 <br>
 技术栈：React Hooks + Typescript + axios + scss + jest
 <br>
