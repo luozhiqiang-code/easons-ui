@@ -1,0 +1,56 @@
+@mixin alert-style(
+  $background,
+  $color,
+){
+  background: lighten($background,15%);
+  color: $color;
+}
+
+.alert {
+  padding: $alert-padding-y $alert-padding-x;
+  width: $alert-width;
+  border-radius: $alert-border-radius;
+  border: $border-width solid transparent;
+  box-shadow: $btn-box-shadow;
+  position: relative;
+  margin-top: .5rem;
+  @include alert-style($primary,$dark);
+
+  .alert-title {
+    margin-bottom: 0;
+    line-height: $alert-line-height;
+    font-size: $alert-title-font-size;
+  }
+
+  .alert-message{
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: $alert-line-height;
+    font-size: $alert-message-font-size;
+  }
+
+  .alert-close-icon {
+    position: absolute;
+    right: $alert-icon-right;
+    top : $alert-icon-top;
+    font-style: normal;
+    cursor: pointer;
+    font-weight: $alert-icon-font-weight;
+  }
+}
+
+//  使用了Transition组件后，此属性可以不需要
+//.is-show{
+//  display: block;
+//}
+
+.alert-danger{
+  @include alert-style($danger,#004085)
+}
+.alert-warning{
+  @include alert-style($warning,#004085)
+}
+.alert-info{
+  @include alert-style($info,#004085)
+}
+

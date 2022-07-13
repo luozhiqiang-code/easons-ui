@@ -1,0 +1,44 @@
+@each $key,$value in $tags-colors {
+  .tag-#{$key} {
+    color: $value;
+  }
+}
+
+@each $key,$value in $tags-bg-colors {
+  .tag-#{$key} {
+    background-color: $value;
+  }
+}
+
+.bull-tag {
+  padding: .2rem;
+  box-sizing: border-box;
+  margin: 0 8px 0 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  border-radius: $border-radius;
+  font-feature-settings: "tnum";
+  display: inline-block;
+  height: auto;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+  border: 1px solid #d9d9d9;
+  opacity: 1;
+  transition: all .3s;
+  cursor: pointer;
+
+  .tag-close-icon {
+    color: inherit;
+    margin-left: 3px;
+    /* color: #00000073; */
+    font-size: 10px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+}
+
+.tag-default{
+  color: #000000d9;
+  background-color: $gray-200;
+}
